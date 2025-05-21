@@ -1,5 +1,24 @@
-.input {
+.wrapper {
+	display: flex;
+	align-items: center;
+	gap: 18px;
 	padding: 18px 12px;
-	font-size: 20px;
-	border: none;
+	background-color: #fff;
+	border-bottom: 1px solid #cbcfcd;
+
+	.input {
+		flex: 1;
+		font-size: 20px;
+		border: none;
+		outline: none;
+	}
+
+	.add {
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			color: #7f847d;
+		}
+	}
 }

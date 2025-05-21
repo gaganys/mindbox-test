@@ -1,13 +1,19 @@
+import { ChevronDown, Plus } from 'lucide-react'
+import type { InputProps } from '../../types/types'
 import styles from './Input.module.scss'
 
-interface InputProps {
-	placeholder: string
-	value: string
-}
-
-const Input = ({ placeholder, value }: InputProps) => {
+const Input = ({ placeholder, value, onChange, onClick }: InputProps) => {
 	return (
-		<input className={styles.input} value={value} placeholder={placeholder} />
+		<div className={styles.wrapper}>
+			<ChevronDown />
+			<input
+				className={styles.input}
+				value={value}
+				onChange={onChange}
+				placeholder={placeholder}
+			/>
+			{value && <Plus className={styles.add} onClick={onClick} />}
+		</div>
 	)
 }
 

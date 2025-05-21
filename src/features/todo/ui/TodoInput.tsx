@@ -1,7 +1,21 @@
+import type React from 'react'
 import Input from '../../../shared/ui/Input/Input'
 
-const TodoInput = () => {
-	return <Input placeholder='What needs to be done?' value='' />
+interface TodoInputProps {
+	value: string
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+	onClick: () => void
+}
+
+const TodoInput = ({ value, onChange, onClick }: TodoInputProps) => {
+	return (
+		<Input
+			placeholder='What needs to be done?'
+			value={value}
+			onChange={onChange}
+			onClick={onClick}
+		/>
+	)
 }
 
 export default TodoInput
