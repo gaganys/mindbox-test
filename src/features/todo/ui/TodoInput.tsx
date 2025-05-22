@@ -8,12 +8,19 @@ interface TodoInputProps {
 }
 
 const TodoInput = ({ value, onChange, onClick }: TodoInputProps) => {
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+		if (e.key === 'Enter' && value.trim()) {
+			onClick()
+		}
+	}
+
 	return (
 		<Input
 			placeholder='What needs to be done?'
 			value={value}
 			onChange={onChange}
 			onClick={onClick}
+			onKeyDown={handleKeyDown}
 		/>
 	)
 }

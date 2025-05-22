@@ -12,6 +12,13 @@
 		padding: 18px 12px;
 		border-bottom: 1px solid #cbcfcd;
 
+		.hiddenCheckbox {
+			position: absolute;
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
 		.completed {
 			display: flex;
 			align-items: center;
