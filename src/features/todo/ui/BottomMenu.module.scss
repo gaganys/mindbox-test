@@ -1,0 +1,41 @@
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 18px;
+	background-color: #fff;
+	border-top: 1px solid #cbcfcd;
+
+	& > div {
+		cursor: pointer;
+		transition: all 0.15s ease-in-out;
+
+		&:hover {
+			color: #919392;
+		}
+	}
+
+	.tabs {
+		display: flex;
+		gap: 18px;
+		list-style-type: none;
+
+		.tab {
+			padding: 5px 10px;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.15s ease-in-out;
+
+			&:hover {
+				border-color: #e592a3;
+			}
+		}
+
+		.activeTab {
+			padding: 5px 10px;
+			border: 1px solid #e592a3;
+			border-radius: 5px;
+		}
+	}
+}

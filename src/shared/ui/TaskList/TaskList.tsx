@@ -14,8 +14,8 @@ const Task = ({
 	removeTask,
 }: TaskProps) => {
 	return (
-		<div className={styles.taskWrapper}>
-			<div className={styles.completed} onClick={() => toggleIsCompleted(id)}>
+		<div className={styles.taskWrapper} onClick={() => toggleIsCompleted(id)}>
+			<div className={styles.completed}>
 				{isCompleted && <Check size={20} color='#65BA74' />}
 			</div>
 			<li className={isCompleted ? styles.completedTask : styles.task}>
